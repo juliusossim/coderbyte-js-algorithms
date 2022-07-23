@@ -9,4 +9,26 @@ const sum = (arr) => {
   return arr[0] + sum(rest);
 }
 
+//Big O
+// n sum calls and n arr.slice calls
+// n call stacks
+
+// Time: O(n2) (quadratic)
+// Space: O(n)
+
+
+// optimised solution:
+
+const sum2 = (arr) => {
+  return _sum(arr, 0);
+}
+const _sum = (arr, index) => {
+  if(index === arr.length) return 0;
+  return arr[index] + _sum(arr, index + 1)
+}
+
+//Big O
+// Time: O(n)
+//Space: O(n)
+
 console.log(sum(arr));
