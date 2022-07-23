@@ -31,4 +31,18 @@ const _sum = (arr, index) => {
 // Time: O(n)
 //Space: O(n)
 
+
+//Multi-Branch Recursive solutions
+
+// fibonacci series
+
+const fib = (n) => {
+  if(n === 1 || n === 2) return 1;
+  return fib(n-1) + fib(n-2);
+}
+
+//Big O 
+// Time: O(2^n) (Exponential)
+// Space: O(n)
+
 console.log(sum(arr));
