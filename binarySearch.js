@@ -30,18 +30,18 @@ const binarySearch = ({ arr, target }) => {
 
 //recursive method
 const binarySearchRecursive = ({ arr, target, left, right }) => {
+  if(left > right)   return false;
+
   const mid = Math.floor(left + right / 2);
   if (target === arr[mid]) return mid;
   if(target > arr[mid])
-    binarySearchRecursive({arr, target, left: mid + 1, right});
-  else  binarySearchRecursive({arr, target, left: left, right: mid - 1});
-  return false;
-
+    return binarySearchRecursive({arr, target, left: mid + 1, right});
+  else  return binarySearchRecursive({arr, target, left: left, right: mid - 1});
 };
 // BigO
 // time: O(logn)
 // space: O(n)
 
-// console.log(binarySearchRecursive({arr, target: 10, left: 0, right: arr.length - 1}));
-console.log(binarySearch({arr, target: 8}));
+console.log(binarySearchRecursive({arr, target: 10, left: 0, right: arr.length - 1}));
+console.log(binarySearch({arr, target: 7}));
 
