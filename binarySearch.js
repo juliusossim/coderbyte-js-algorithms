@@ -33,4 +33,6 @@ const binarySearchRecursive = ({ arr, target, left, right }) => {
   return false;
 
 };
-console.log(binarySearchRecursive({arr, target: 10, left: 0, right: arr.length - 1}));
+// console.log(binarySearchRecursive({arr, target: 10, left: 0, right: arr.length - 1}));
+console.log(binarySearch({arr, target: 7}));
+
