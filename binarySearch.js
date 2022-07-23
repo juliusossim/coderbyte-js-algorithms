@@ -12,7 +12,7 @@ const binarySearch = ({ arr, target }) => {
     if(target === arr[mid]){
       return mid;
     } else{
-      if(target > left) {
+      if(target > arr[mid]) {
         left = mid + 1;
       } else {
         right = mid - 1;
@@ -27,10 +27,10 @@ const binarySearch = ({ arr, target }) => {
 const binarySearchRecursive = ({ arr, target, left, right }) => {
   const mid = Math.floor(left + right / 2);
   if (target === arr[mid]) return mid;
-  if(target > left)
+  if(target > arr[mid])
     binarySearchRecursive({arr, target, left: mid + 1, right});
   else  binarySearchRecursive({arr, target, left: left, right: mid - 1});
   return false;
 
 };
-console.log(binarySearchRecursive({arr, target: 12, left: 0, right: 7}));
+console.log(binarySearchRecursive({arr, target: 10, left: 0, right: arr.length - 1}));
