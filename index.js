@@ -1,8 +1,8 @@
 // Import stylesheets
 import './style.css';
 
-import './recursions/binarySearch.js';
-import './complexRecursion.js';
+import './binarySearch.js';
+import './recursions/complexRecursion.js';
 
 
 // // Write Javascript code!
