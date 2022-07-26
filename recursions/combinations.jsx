@@ -5,10 +5,13 @@ const combinations = (arr) => {
   const firstEl = arr[0];
   const rest = arr.slice(1);
   const combsWithoutFirstEls = combinations(rest);
-  const allCombs = [];
+  const combsWithFirstEls = [];
 
   //combinations with first element
-  const combsWithFirstEls = combsWithoutFirstEls.forEach(comb => ([...comb, firstEl]));
+   combsWithoutFirstEls.forEach(comb => {
+     const combWithFirst = ([...comb, firstEl])
+     combsWithFirstEls.push(combWithFirst);
+    });
 
   return [...combsWithFirstEls, ...combsWithoutFirstEls];
 
